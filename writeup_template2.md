@@ -85,8 +85,11 @@ My pipeline consisted of 5 steps. TO illustrate it with an example, let us consi
 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by:
+
     1) Discard line segments whose absolute slope is less than a threshold.   
+    
     2) Separating line segments by their slope to decide which segments are part of the left line vs. the right line.
+    
     3) Finally applying polyFit of order 1 to them and Extrapolate to the top and bottom of the lane masking poygon
 
 
